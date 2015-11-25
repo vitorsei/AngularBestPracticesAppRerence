@@ -23,7 +23,7 @@ app.factory('catalog', function(Restangular) {
   return Restangular.all('courses');
 });
 
-app.factory('followedInstructors', function($http, $q) {
+app.factory('followedInstructors', function($http) {
   return {
     get: function() {
       return $http.get('data/userData/followedInstructors');
